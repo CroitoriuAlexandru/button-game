@@ -1,3 +1,4 @@
 # button-game
-This is a simple game in witch you chose a number of buttons to be generated an pres start game. 
-Among all the buttons that have been generated there is only one that is the correct one and your mission is to test your luck so good luck to you :)
+This is a simple game in which you chose several buttons to be generated and after that, you have to guess the lucky button amongst all others.
+
+This project is built with the help of bootstrap for styles, but my main focus was not on how it looks as that area needs more refinement in my case.
