@@ -3,11 +3,12 @@ var restartGame = document.getElementById("restartGame");
 var inputField = document.getElementById("inputField");
 var gameBoard = document.getElementById("gameBoard");
 var luckyNumber;
+var inputFieldNumber;
 restartGame.disabled = true;
 
 // chacks number of buttons to be right and generates those buttons in the gameBoard element
 startGame.addEventListener("click", function () {
-  let inputFieldNumber = parseInt(inputField.value);
+  inputFieldNumber = parseInt(inputField.value);
   if (inputFieldNumber >= 2 && 100 >= inputFieldNumber) {
     luckyNumber = Math.floor(Math.random() * inputFieldNumber + 1);
     startGame.disabled = true;
@@ -33,10 +34,18 @@ restartGame.addEventListener("click", function () {
 // on click function of the generated buttons
 function check(button) {
   if (parseInt(button.id) == luckyNumber) {
-    button.className = "btn btn-success";
+    button.className = "btn btn-success m-1";
     button.innerHTML = "It was me";
+    button.disabled = true;
+    for (let i = 0; i < inputFieldNumber; ++i) {
+      if (!gameBoard.children[i].disabled) {
+        gameBoard.children[i].disabled = true;
+      }
+    }
+    alert("You have won, now you can reset and try again");
   } else {
-    button.className = "btn btn-danger";
+    button.className = "btn btn-danger m-1";
     button.innerHTML = "It wasn't me";
+    button.disabled = true;
   }
 }
