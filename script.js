@@ -1,9 +1,9 @@
-var startGame = document.getElementById("startGame");
-var restartGame = document.getElementById("restartGame");
-var inputField = document.getElementById("inputField");
-var gameBoard = document.getElementById("gameBoard");
-var luckyNumber;
-var inputFieldNumber;
+let startGame = document.getElementById("startGame");
+let restartGame = document.getElementById("restartGame");
+let inputField = document.getElementById("inputField");
+let gameBoard = document.getElementById("gameBoard");
+let luckyNumber;
+let inputFieldNumber;
 restartGame.disabled = true;
 
 // chacks number of buttons to be right and generates those buttons in the gameBoard element
